@@ -1,0 +1,17 @@
+# Dependências
+node_modules/
+.pnpm-store/
+
+# Builds (Arquivos gerados automaticamente pelo Vite)
+dist/
+
+# Logs e arquivos de sistema
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Configurações locais (Vercel)
+.vercel
+
+# Minha pasta de ajuda (no futuro ela vai para o AR hehe)
+/1-help

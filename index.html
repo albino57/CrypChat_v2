@@ -1,0 +1,86 @@
+<!-- ./index.html-->
+<!DOCTYPE html>
+<html lang="pt-br"> <!--Define o idioma principal-->
+
+<head> <!--Metadados. É tudo o que o navegador precisa saber sobre a página antes de começar a desenhá-la.-->
+    <meta charset="UTF-8">
+    <!--Garante que o navegador entenda símbolos especiais, emojis e, principalmente, acentuação (ã, é, ç).-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--"initial-scale=1.0" = Mantem a identidade visual da aplicação, evita espremer as letras-->
+    <!--""width=device-width" = Usa a largura real da tela do aparelho-->
+    <title>CrypChat</title>
+    <!--Para leitores de tela (usados por cegos), o title é a primeira coisa lida. É o que ajuda o usuário a saber em qual site ele "aterrizou".-->
+    <link id="theme-link" rel="stylesheet" href="./src/vanilla/styles/styles-login_dark.css">
+</head>
+
+<body>
+    <main class="login-card">
+        <header>
+            <button id="theme-toggle" class="theme-btn">[1]</button>
+            <h1 class="glitch">CrypChat</h1>
+        </header>
+
+        <form id="login-form">
+            <fieldset class="field-group">
+                <legend>Caminho da Conexão:</legend>
+                <!-- <legend>: É o título desse grupo. É a legenda que explica o que o usuário deve fazer dentro do quadrado.-->
+
+                <label>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <input type="radio" name="caminho" value="cloud" checked>
+                        <span>[ Servidor Google ]</span>
+                    </div>
+                    <span class="status-dot offline"></span>
+                </label>
+
+                <label>
+                    <div style="display: flex; align-items: center; gap: 5px;">
+                        <input type="radio" name="caminho" value="local"> 
+                        <span>[ Servidor CrypChat ]</span>
+                    </div>
+                    <span class="status-dot offline"></span>
+                </label>
+            </fieldset>
+
+            <fieldset class="field-group2">
+                <legend>Modo de Conexão:</legend>
+                <label>
+                    <input type="radio" name="modo" value="vanilla"> Leve (Conexão Lenta)
+                </label>
+                <label>
+                    <input type="radio" name="modo" value="vue" checked> Normal (VUE)
+                </label>
+            </fieldset>
+
+            <div class="auth-fields">
+                <label>
+                    <span>USUÁRIO</span>
+                    <input type="text" placeholder="" required>
+                </label>
+                <label>
+                    <span>SENHA</span>
+                    <input type="password" placeholder="" required>
+                </label>
+            </div>
+
+            <div class="btn">
+                <button type="button" class="btn-register">REGISTRAR_</button>
+                <button type="submit" class="btn-connect">CONECTAR_</button>
+            </div>
+        </form>
+
+        <footer>
+            <!--<footer>: Define o rodapé. É onde colocamos informações secundárias que não fazem parte do fluxo principal de login.-->
+            <button onclick="alert('Versão 0.1-alpha \nLoginPage Criada')" class="btn-info">InfoVersão</button>
+        </footer>
+    </main>
+        
+    <!-----↓ Scripts compatíveis com 100% dos navegadores padrão antigo (ES5) ↓----->
+    <script nomodule defer src="./src/vanilla/login_page.js"></script> <!-- O 'defer' garante que o script não trave o carregamento do HTML -->
+    <script nomodule defer src="./src/vanilla/set_theme_legacy.js"></script>  
+
+    <!-----↓ Scripts modernos do JavaScript (ES6+) ↓----->
+    <script type="module" src="./src/vanilla/set_theme.js"></script>
+</body>
+
+</html>

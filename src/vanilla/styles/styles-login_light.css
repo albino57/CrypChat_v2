@@ -1,0 +1,249 @@
+/* ./src/vanilla/styles/styles-login_light.css */
+
+body {
+    background-color: #707070;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;           /* Ativa o modo de caixa flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+
+    min-height: 100vh;   /* No mínimo o tamanho da tela, mas cresce se precisar */
+    margin: 0;
+    overflow-y: auto;    /* Ativa scroll vertical se o card for maior que a tela */
+    overflow-x: auto;    /* Ativa scroll horizontal se a tela for menor que 315px */
+    overflow-x: auto;    /* Garante a barra horizontal se o card bater na borda */
+    padding: 10px 0;     /* Evita que o card encoste no topo/fundo ao rolar */
+}
+
+.login-card {
+    border: 3px solid #000000;
+    padding: 1rem;
+    background: #eeeeee;
+    box-shadow: 10px 10px 5px #1a4d2e; /*horizontal_px | vertical_px | precisão_px*/
+    min-width: 325px;
+    max-width: 325px; /* Largura Máxima do Card*/
+    width: 95%;       /* Largura total em 95% garante que não perderá efeito sombra ao espremer a janela */
+}
+
+header { /* Header para garatir que o h1 ficará cetralizando durante a animação */
+    position: relative; /* Define que o botão vai se alinhar em relação ao header */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Garante que o H1 inline-block fique no meio lá no .glitch no "Animação h1 CrypChat" */
+}
+
+h1 { 
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 0.1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #000000;
+}
+
+.field-group, .field-group2 {
+    display: flex;
+    flex-direction: column; /* Força os filhos (labels) a ficarem em coluna */
+    gap: 2px;               /* Cria um espaço entre as opções sem precisar de margin */
+    margin-bottom: 1rem; 
+    border: 1px solid #1a4d2e; 
+    padding: 10px; 
+}
+
+.field-group label {
+    display: flex;
+    align-items: center;      /* Alinha verticalmente no centro */
+    justify-content: space-between; /* Empurra a bolinha para o extremo oposto do texto */
+    width: 100%;              /* Garante que o label ocupe toda a largura do fieldset */
+    cursor: pointer;
+    padding: 4px 0;           /* Um respiro entre as opções */
+}
+
+
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.auth-fields label {
+    display: flex;
+    flex-direction: column; /* Coloca o texto em cima e o input embaixo */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;  /* Dá espaço entre o campo de usuário e senha */
+}
+
+.auth-fields span {
+    font-size: 0.9rem;
+    letter-spacing: 2px;    /* Espaçamento entre letras para parecer terminal */
+}
+
+/*----------↓ Sinal de On-line ↓----------*/
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 8px;   /* Espaço entre o texto e a bolinha */
+    vertical-align: middle; /* Alinha com o centro do texto */
+}
+
+.online {
+    background-color: rgb(16, 186, 16);
+    box-shadow: 0 0 8px lightgreen;
+}
+
+.offline {
+    background-color: #ff0000;
+    box-shadow: 0 0 8px #ff0000;
+}
+/*----------↑ Sinal de On-line ↑----------*/
+
+/*----------↓ Botões ↓----------*/
+.theme-btn {
+    position: absolute; /* Sai do fluxo normal e flutua */
+    right: 0;           /* Alinha na parede da direita */
+    top:  0;            /* Alinha com o topo do header */
+    
+    background: transparent;
+    color: #000000;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    color: #ff0000;
+}
+
+.btn {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;      
+    width: 100%;
+}
+
+.btn-register, .btn-connect {
+    flex: 1;        /* Faz ambos crescerem igualmente para ocupar a largura */
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+.btn-register {
+    background: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+.btn-connect {
+    background: #000000;
+    border: 1px solid #000000;
+    color: #707070;
+}
+
+.btn-register:hover {
+    color: white;
+    box-shadow: 0 0 25px white;
+}
+
+.btn-connect:hover { 
+    background: white; 
+    color: #000000;
+    box-shadow: 0 0 25px white;
+    transform: scale(1.05); /* Aumenta ao passar o mouse */
+}
+
+.btn-info {
+    display: flex;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: #1a4d2e;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+/*----------↑ Botões ↑----------*/
+
+/*-----↓ Animação h1 CrypChat ↓-----*/
+@keyframes flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 5px #000000; }
+  31% { opacity: 1; }
+  32% { opacity: 0.2; text-shadow: none; } /* Apaga rápido */
+  33% { opacity: 1; }
+  35% { opacity: 0.1; } /* Apaga de novo */
+  36% { opacity: 1; text-shadow: 0 0 10px #000000; }
+  80% { opacity: 1; }
+  81% { opacity: 0.5; }
+  82% { opacity: 1; }
+}
+
+.glitch {
+  display: inline-block;
+  animation: flicker 5s infinite;
+}
+/*-----↑ Animação h1 CrypChat ↑-----*/
+
+/*----------↓ Animação Sinal de On-line ↓----------*/
+@keyframes pulse-status {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.online {
+    animation: pulse-status 2s infinite ease-in-out;
+}
+
+@keyframes pulse-status2 {
+    15% { opacity: 0.7; }
+    31% { opacity: 1; }
+    32% { opacity: 0.2; text-shadow: none; }
+    33% { opacity: 1; }
+    35% { opacity: 0.1; }
+    36% { opacity: 1; text-shadow: 0 0 10px #000000; }
+    80% { opacity: 1; }
+    81% { opacity: 0.5; }
+    82% { opacity: 1; }
+    85% { opacity: 0.2; }
+    100% { opacity: 0.1; }
+}
+
+.offline {
+    animation: pulse-status2 3s infinite ease-in-out;
+}
+/*----------↑ Animação Sinal de On-line ↑----------*/
+
+/*-----↓ Animação botão Conectar_ ↓-----*/
+@keyframes btn-pulse-flicker {
+  0% { box-shadow: 0 0 0px #000000; }
+  31% { opacity: 1; }
+  32% { opacity: 0.2; text-shadow: none; } /* Apaga rápido */
+  33% { opacity: 1; }
+  35% { opacity: 0.1; } /* Apaga de novo */
+  36% { opacity: 1; text-shadow: 0 0 10px #000000; }
+  50% { box-shadow: 0 0 15px #000000; }
+  80% { opacity: 1; }
+  81% { opacity: 0.5; }
+  82% { opacity: 1; }
+  100% { box-shadow: 0 0 0px #000000; }
+}
+
+.btn-connect {
+    animation: btn-pulse-flicker 3s infinite ease-in-out;
+}
+
+/*-----↑ Animação botão Conextar_ ↑-----*/
