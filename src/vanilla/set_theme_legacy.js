@@ -1,19 +1,30 @@
 // /src/vanilla/set_theme_legacy.js
 
 // Versão compatível com 100% dos navegadores padrão antigo (ES5).
-var themeLink = document.getElementById('theme-link');
+var darkTheme = document.getElementById('theme-dark');
+var lightTheme = document.getElementById('theme-light');
 var themeBtn = document.getElementById('theme-toggle');
 
 //-----↓ Função que muda o tema ↓-----
 themeBtn.onclick = function() {
-    if (themeLink.href.includes('styles-login_dark.css')) { // Verifica qual arquivo está carregado no momento
-        console.log("Tema alterado para o light.")
-        themeLink.href = './src/vanilla/styles/styles-login_light.css'; // Muda para o tema claro
-        themeBtn.innerHTML = '[ 0 ]'; // Atualiza o visual do botão
+
+    const isLightDisabled = lightTheme.disabled; // Verifica se o light está desativado
+
+    if (isLightDisabled) { 
+        console.log("Light Mode Ativado");
+        
+        lightTheme.disabled = false; //Ativa o light mode sobreescrevendo o dark mode, mas não o substituindo para gerar flashes na transição.
+        themeBtn.innerHTML = '[0]';
+        
+        // localStorage.setItem('theme', 'light'); 
     } else {
-        console.log("Tema alterado para o dark.")
-        themeLink.href = './src/vanilla/styles/styles-login_dark.css'; // Volta para o tema escuro
-        themeBtn.innerHTML = '[ 1 ]';
+        // --- MUDAR PARA DARK ---
+        console.log("Dark Mode Ativado");
+        
+        lightTheme.disabled = true;  //desativa o light mode.
+        themeBtn.innerHTML = '[1]';
+        
+        // localStorage.setItem('theme', 'dark');
     }
 };
 //-----↑ Função que muda o tema ↑-----

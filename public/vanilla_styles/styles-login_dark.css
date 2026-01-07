@@ -1,8 +1,8 @@
-/* ./src/vanilla/styles/styles-login_light.css */
+/* ./public/vanilla_styles/styles-login_dark.css */
 
 body {
-    background-color: #707070;
-    color: #000000;
+    background-color: #000000;
+    color: #00FF41;
     font-family: 'Courier New', Courier, monospace;
 
     display: flex;           /* Ativa o modo de caixa flexível */
@@ -18,10 +18,10 @@ body {
 }
 
 .login-card {
-    border: 3px solid #000000;
+    border: 3px solid #00FF41;
     padding: 1rem;
-    background: #eeeeee;
-    box-shadow: 10px 10px 5px #1a4d2e; /*horizontal_px | vertical_px | precisão_px*/
+    background: #000000;
+    box-shadow: 10px 10px 5px #003B00; /*horizontal_px | vertical_px | precisão_px*/
     min-width: 325px;
     max-width: 325px; /* Largura Máxima do Card*/
     width: 95%;       /* Largura total em 95% garante que não perderá efeito sombra ao espremer a janela */
@@ -41,7 +41,7 @@ h1 {
     padding-bottom: 0.1rem;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid #00FF41;
 }
 
 .field-group, .field-group2 {
@@ -49,7 +49,7 @@ h1 {
     flex-direction: column; /* Força os filhos (labels) a ficarem em coluna */
     gap: 2px;               /* Cria um espaço entre as opções sem precisar de margin */
     margin-bottom: 1rem; 
-    border: 1px solid #1a4d2e; 
+    border: 1px solid #003B00; 
     padding: 10px; 
 }
 
@@ -67,8 +67,8 @@ h1 {
 input[type="text"], input[type="password"] {
     width: 100%;
     background: transparent;
-    border: 1px solid #000000;
-    color: #000000;
+    border: 1px solid #00FF41;
+    color: #00FF41;
     padding: 8px;
     margin-top: 10px;
     box-sizing: border-box;
@@ -114,7 +114,7 @@ input[type="text"], input[type="password"] {
     top:  0;            /* Alinha com o topo do header */
     
     background: transparent;
-    color: #000000;
+    color: #00FF41;
     font-family: 'Courier New', monospace;
     font-size: 1rem; 
     cursor: pointer;
@@ -143,14 +143,14 @@ input[type="text"], input[type="password"] {
 
 .btn-register {
     background: transparent;
-    border: 1px solid #000000;
-    color: #000000;
+    border: 1px solid #00FF41;
+    color: #00FF41;
 }
 
 .btn-connect {
-    background: #000000;
-    border: 1px solid #000000;
-    color: #707070;
+    background: #00FF41;
+    border: 1px solid #00FF41;
+    color: #000000;
 }
 
 .btn-register:hover {
@@ -160,7 +160,7 @@ input[type="text"], input[type="password"] {
 
 .btn-connect:hover { 
     background: white; 
-    color: #000000;
+    color: #00FF41;
     box-shadow: 0 0 25px white;
     transform: scale(1.05); /* Aumenta ao passar o mouse */
 }
@@ -170,7 +170,7 @@ input[type="text"], input[type="password"] {
     margin-left: auto;
     background: transparent;
     border: none;
-    color: #1a4d2e;
+    color: #003B00;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
@@ -180,12 +180,12 @@ input[type="text"], input[type="password"] {
 
 /*-----↓ Animação h1 CrypChat ↓-----*/
 @keyframes flicker {
-  0%, 100% { opacity: 1; text-shadow: 0 0 5px #000000; }
+  0%, 100% { opacity: 1; text-shadow: 0 0 5px #00FF41; }
   31% { opacity: 1; }
   32% { opacity: 0.2; text-shadow: none; } /* Apaga rápido */
   33% { opacity: 1; }
   35% { opacity: 0.1; } /* Apaga de novo */
-  36% { opacity: 1; text-shadow: 0 0 10px #000000; }
+  36% { opacity: 1; text-shadow: 0 0 10px #00FF41; }
   80% { opacity: 1; }
   81% { opacity: 0.5; }
   82% { opacity: 1; }
@@ -214,7 +214,7 @@ input[type="text"], input[type="password"] {
     32% { opacity: 0.2; text-shadow: none; }
     33% { opacity: 1; }
     35% { opacity: 0.1; }
-    36% { opacity: 1; text-shadow: 0 0 10px #000000; }
+    36% { opacity: 1; text-shadow: 0 0 10px #00FF41; }
     80% { opacity: 1; }
     81% { opacity: 0.5; }
     82% { opacity: 1; }
@@ -229,17 +229,17 @@ input[type="text"], input[type="password"] {
 
 /*-----↓ Animação botão Conectar_ ↓-----*/
 @keyframes btn-pulse-flicker {
-  0% { box-shadow: 0 0 0px #000000; }
+  0% { box-shadow: 0 0 0px #00FF41; }
   31% { opacity: 1; }
   32% { opacity: 0.2; text-shadow: none; } /* Apaga rápido */
   33% { opacity: 1; }
   35% { opacity: 0.1; } /* Apaga de novo */
-  36% { opacity: 1; text-shadow: 0 0 10px #000000; }
-  50% { box-shadow: 0 0 15px #000000; }
+  36% { opacity: 1; text-shadow: 0 0 10px #00FF41; }
+  50% { box-shadow: 0 0 15px #00FF41; }
   80% { opacity: 1; }
   81% { opacity: 0.5; }
   82% { opacity: 1; }
-  100% { box-shadow: 0 0 0px #000000; }
+  100% { box-shadow: 0 0 0px #00FF41; }
 }
 
 .btn-connect {
