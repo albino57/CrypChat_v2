@@ -8,6 +8,8 @@
 
 > **Status:** 🌐 Online em [www.crypchat.com.br](https://www.crypchat.com.br)
 
+---
+
 O **CrypChat** é uma plataforma de comunicação criptografada projetada para cenários onde a conectividade é lenta e a segurança é inegociável com vários tamanhos de criptografia. Sua arquitetura é baseada no princípio da **Evolução Contínua**, permitindo que o sistema funcione desde navegadores antigos (Modo Vanilla) até interfaces modernas e ricas (Modo Vue).
 
 ## 🚀 O que há de novo na v0.1.1?
@@ -18,6 +20,24 @@ Para uma lista completa e detalhada de funcionalidades adicionadas e correções
 *   **Resiliência Total:** Interface capaz de operar em telas menores que 315px com scrolbar.
 *   **DNA Visual Matrix:** Estética baseada em terminais de comando com animações nativas de instabilidade de sinal (Flicker).
 *   **Zero Dependência:** Modo de login 100% Vanilla JS/CSS para garantir o acesso mesmo sob alta latência.
+
+---
+
+## 🛠️ Tecnologias & Ferramentas
+
+O projeto utiliza uma stack **FullStack** focada em performance e compatibilidade máxima:
+
+* **Linguagens:** `JavaScript ES6+`, `TypeScript` (Criptografia) e `HTML5/CSS3`.
+* **Ambiente de Execução:** [Node.js](https://nodejs.org/) (Backend).
+* **Frameworks:** [Express](https://expressjs.com/pt-br/) (Servidor de API) e [Vue.js 3](https://vuejs.org/) (Interface Moderna).
+* **CrypChat Server:** [Raspberry Pi](https://www.raspberrypi.org/) (Nó central de comunicação local).
+* **Infraestrutura Cloud:** [Google Cloud Functions](https://cloud.google.com/functions) (Escalabilidade e redundância).
+* **Interfaces:** 
+    * **Modo Raiz:** Vanilla JS (Focado em baixa latência e compatibilidade).
+    * **Modo Normal:** Vue.js (Interface rica e alta performance).
+* **Build & Deploy:** [Vite](https://vitejs.dev/), [Vercel](https://vercel.com/) e [Registro.br](https://registro.br/).
+
+---
 
 ## 📁 Estrutura do Projeto
 
