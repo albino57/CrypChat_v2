@@ -1,8 +1,12 @@
 # 📟 CrypChat
 
-![Versão](img.shields.io)
-[![Changelog](img.shields.io)](CHANGELOG.md)
-[![Status do Projeto](img.shields.io)](CHANGELOG.md)
+![Versão](https://img.shields.io/badge/versão-v0.1.1-green?style=for-the-badge&color=00FF41&labelColor=000000)
+[![Changelog](https://img.shields.io/badge/changelog-visualizar-blue?style=for-the-badge&color=00FF41&labelColor=000000)](CHANGELOG.md)
+[![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge&color=00FF41&labelColor=000000)](CHANGELOG.md)
+
+[![Link da Aplicação](https://img.shields.io/badge/Acesse_o_App-Link-blue?style=for-the-badge&color=00FF41&labelColor=000000)](https://www.crypchat.com.br)
+
+> **Status:** 🌐 Online em [www.crypchat.com.br](https://www.crypchat.com.br)
 
 O **CrypChat** é uma plataforma de comunicação criptografada projetada para cenários onde a conectividade é lenta e a segurança é inegociável com vários tamanhos de criptografia. Sua arquitetura é baseada no princípio da **Evolução Contínua**, permitindo que o sistema funcione desde navegadores antigos (Modo Vanilla) até interfaces modernas e ricas (Modo Vue).
 
