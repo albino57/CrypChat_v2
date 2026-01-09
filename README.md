@@ -1,10 +1,10 @@
 # 📟 CrypChat
 
-![Versão](https://img.shields.io/badge/versão-v0.1.1-green?style=for-the-badge&color=00FF41&labelColor=000000)
-[![Changelog](https://img.shields.io/badge/changelog-visualizar-blue?style=for-the-badge&color=00FF41&labelColor=000000)](CHANGELOG.md)
-[![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge&color=00FF41&labelColor=000000)](CHANGELOG.md)
+![Versão](https://img.shields.io/badge/versão-v0.1.2-green?style=for-the-badge&color=003B00&labelColor=000000)
+[![Changelog](https://img.shields.io/badge/changelog-visualizar-blue?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
+[![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 
-[![Link da Aplicação](https://img.shields.io/badge/Acesse_o_App-Link-blue?style=for-the-badge&color=00FF41&labelColor=000000)](https://www.crypchat.com.br)
+[![Link da Aplicação](https://img.shields.io/badge/Acesse_o_App-Link-blue?style=for-the-badge&color=003B00&labelColor=000000)](https://www.crypchat.com.br)
 
 > **Status:** 🌐 Online em [www.crypchat.com.br](https://www.crypchat.com.br)
 
