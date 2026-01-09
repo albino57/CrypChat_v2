@@ -4,17 +4,13 @@ body {
     background-color: #000000;
     color: #00FF41;
     font-family: 'Courier New', Courier, monospace;
-
     display: flex;           /* Ativa o modo de caixa flexível */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
-
-    min-height: 100vh;   /* No mínimo o tamanho da tela, mas cresce se precisar */
+    min-height: 100dvh;      /* Usa a altura dinâmica (Dynamic Viewport Height) */
     margin: 0;
     overflow-y: auto;    /* Ativa scroll vertical se o card for maior que a tela */
     overflow-x: auto;    /* Ativa scroll horizontal se a tela for menor que 315px */
-    overflow-x: auto;    /* Garante a barra horizontal se o card bater na borda */
-    padding: 10px 0;     /* Evita que o card encoste no topo/fundo ao rolar */
 }
 
 .login-card {
@@ -62,8 +58,6 @@ h1 {
     padding: 4px 0;           /* Um respiro entre as opções */
 }
 
-
-
 input[type="text"], input[type="password"] {
     width: 100%;
     background: transparent;
@@ -72,6 +66,12 @@ input[type="text"], input[type="password"] {
     padding: 8px;
     margin-top: 10px;
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) { /* Este trecho de código garante que não haverá Zoom em mobile pela fonte ser menor que 16px*/
+    input, select, textarea {
+        font-size: 16px !important;
+    }
 }
 
 .auth-fields label {
@@ -170,80 +170,80 @@ input[type="text"], input[type="password"] {
     margin-left: auto;
     background: transparent;
     border: none;
-    color: #003B00;
+    color: #00FF41;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
-    text-decoration: underline;
 }
 /*----------↑ Botões ↑----------*/
 
+@media (prefers-reduced-motion: reduce) { /*Opção que desativa as animações e transições Cinetose (Motion Sickness)*/
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 /*-----↓ Animação h1 CrypChat ↓-----*/
 @keyframes flicker {
-  0%, 100% { opacity: 1; text-shadow: 0 0 5px #00FF41; }
-  31% { opacity: 1; }
-  32% { opacity: 0.2; text-shadow: none; } /* Apaga rápido */
-  33% { opacity: 1; }
-  35% { opacity: 0.1; } /* Apaga de novo */
-  36% { opacity: 1; text-shadow: 0 0 10px #00FF41; }
-  80% { opacity: 1; }
-  81% { opacity: 0.5; }
-  82% { opacity: 1; }
+  21% { opacity: 1;   }
+  22% { opacity: 0.1; } /* Apaga */
+  23% { opacity: 1;   } /* Acende */
+  88% { opacity: 1;   } 
+  89% { opacity: 0.1; } 
+  90% { opacity: 1;   } 
 }
 
 .glitch {
   display: inline-block;
-  animation: flicker 5s infinite;
+  animation: flicker 10s infinite;
 }
 /*-----↑ Animação h1 CrypChat ↑-----*/
 
 /*----------↓ Animação Sinal de On-line ↓----------*/
-@keyframes pulse-status {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1); }
+@keyframes online-flicker {
+    0% { opacity: 1;    }
+    50% { opacity: 0.5; }
+    100% { opacity: 1;  }
 }
 
 .online {
-    animation: pulse-status 2s infinite ease-in-out;
+    animation: online-flicker 2s infinite ease-in-out;
 }
 
-@keyframes pulse-status2 {
+@keyframes offline-flicker {
+    14% { opacity:   1; }
     15% { opacity: 0.7; }
-    31% { opacity: 1; }
-    32% { opacity: 0.2; text-shadow: none; }
-    33% { opacity: 1; }
+    25% { opacity: 0.7; }
+    26% { opacity:   1; }
+    31% { opacity:   1; }
+    32% { opacity: 0.2; }
+    33% { opacity:   1; }
     35% { opacity: 0.1; }
-    36% { opacity: 1; text-shadow: 0 0 10px #00FF41; }
-    80% { opacity: 1; }
+    36% { opacity:   1; }
+    80% { opacity:   1; }
     81% { opacity: 0.5; }
-    82% { opacity: 1; }
+    82% { opacity:   1; }
+    84% { opacity:   1; }
     85% { opacity: 0.2; }
-    100% { opacity: 0.1; }
+    90% { opacity: 0.1; }
+    99% { opacity:   1; }
 }
 
 .offline {
-    animation: pulse-status2 3s infinite ease-in-out;
+    animation: offline-flicker 5s infinite ease-in-out;
 }
 /*----------↑ Animação Sinal de On-line ↑----------*/
 
 /*-----↓ Animação botão Conectar_ ↓-----*/
-@keyframes btn-pulse-flicker {
-  0% { box-shadow: 0 0 0px #00FF41; }
-  31% { opacity: 1; }
-  32% { opacity: 0.2; text-shadow: none; } /* Apaga rápido */
-  33% { opacity: 1; }
-  35% { opacity: 0.1; } /* Apaga de novo */
-  36% { opacity: 1; text-shadow: 0 0 10px #00FF41; }
+@keyframes Conectar-pulse {
+  0% { box-shadow: 0 0 0px #00FF41;   }
   50% { box-shadow: 0 0 15px #00FF41; }
-  80% { opacity: 1; }
-  81% { opacity: 0.5; }
-  82% { opacity: 1; }
   100% { box-shadow: 0 0 0px #00FF41; }
 }
 
 .btn-connect {
-    animation: btn-pulse-flicker 3s infinite ease-in-out;
+    animation: Conectar-pulse 3s infinite ease-in-out;
 }
-
 /*-----↑ Animação botão Conextar_ ↑-----*/

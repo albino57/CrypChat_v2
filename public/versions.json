@@ -1,8 +1,23 @@
 {
   "app_name": "CrypChat",
-  "latest_version": "0.1.1",
+  "latest_version": "0.1.2",
   "status": "development",
   "history": [
+    {
+      "version": "0.1.2",
+      "date": "2026-01-08",
+      "changes": [
+        "Implementação do nome e versão da aplicação ao invés do nome 'InfoVersão'.",
+        "Implementação da opção que desativa as animações e transições para usuários com cinetose.",
+        "Implementação do script version_legacy.js.",
+        "Reestruturação de diretórios em `/src/vanilla/` para maior escalabilidade.",
+        "Reestruturação de diretórios em `/public/`para compatibilidade de scripts legacy.",
+        "Refatoração estética do Tema Light e animações de Flicker em ambos os temas.",
+        "Refatoração do dos arquivos de versão.",
+        "Ajuste de `font-size` em inputs para evitar zoom automático em mobile.",
+        "Correção de scroll indesejado e centralização via `100dvh` para mobile."
+      ]
+    },
     {
       "version": "0.1.1",
       "date": "2026-01-07",

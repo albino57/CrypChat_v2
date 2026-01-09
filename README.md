@@ -12,14 +12,19 @@
 
 O **CrypChat** é uma plataforma de comunicação criptografada projetada para cenários onde a conectividade é lenta e a segurança é inegociável com vários tamanhos de criptografia. Sua arquitetura é baseada no princípio da **Evolução Contínua**, permitindo que o sistema funcione desde navegadores antigos (Modo Vanilla) até interfaces modernas e ricas (Modo Vue).
 
-## 🚀 O que há de novo na v0.1.1?
+---
 
-Esta fase inicial estabeleceu a fundação visual e estrutural do projeto.
+## 🚀 O que há de novo na v0.1.2?
+
+Esta versão traz um grande foco em **Estabilidade Mobile** e **Acessibilidade**, além de preparar o terreno para o futuro do projeto.
+
+- **📱 Mobile Experience:** Adeus ao zoom indesejado ao digitar e ao scroll "bobo". A interface agora é firme e usa 100% da altura real da tela (`100dvh`).
+- **♿ Acessibilidade:** Implementada opção nativa para **reduzir movimentos**, pensando em usuários com cinetose (Motion Sickness).
+- **👴 Modo Legacy:** Suporte robusto a navegadores antigos (Android 5+) com scripts dedicados e nova estrutura na pasta `/public`.
+- **🎨 UI Refinada:** Melhorias visuais no **Tema Light**, animações de flicker ajustadas e botão de versão dinâmico.
+- **🔧 Arquitetura:** Reorganização completa de diretórios para garantir escalabilidade nas próximas versões.
+
 Para uma lista completa e detalhada de funcionalidades adicionadas e correções de bugs, por favor, consulte o arquivo **[CHANGELOG.md](CHANGELOG.md)**.
-
-*   **Resiliência Total:** Interface capaz de operar em telas menores que 315px com scrolbar.
-*   **DNA Visual Matrix:** Estética baseada em terminais de comando com animações nativas de instabilidade de sinal (Flicker).
-*   **Zero Dependência:** Modo de login 100% Vanilla JS/CSS para garantir o acesso mesmo sob alta latência.
 
 ---
 
@@ -47,7 +52,10 @@ A organização dos diretórios reflete a separação entre núcleo de seguranç
 crypchat/
 ├── index.html                      # Ponto de entrada (Login Vanilla)
 ├── public/
-│   ├── versions.json               # Histórico de versões (Carregamento Preguiçoso)
+│   ├── versions.json               # Histórico de versões
+│   ├── vanilla_scripts
+│   |   ├── set_theme_legacy.js
+│   |   └── version_legacy.js
 │   ├── vanilla_styles
 │   │   ├── styles-login_dark.css   # Estilo CSS do modo vanilla no tema escuro
 │   │   └── styles-login_light.css  # Estilo CSS do modo vanilla no tema claro
@@ -57,10 +65,12 @@ crypchat/
 │   ├── common/                     # DNA Visual (Cores, Fontes e Keyframes Globais)
 │   ├── vanilla/                    # Scripts JavaScript
 │   │   ├── styles/                 # Layouts específicos do modo raiz
-│   │   ├── chat_page_vanilla.js    
-│   │   ├── login_page_vanilla.js
-│   │   ├── set_theme_legacy.js
-│   │   └── set_theme.js
+│   │   ├── chatPage_scripts
+│   │   │   └── chat_page_vanilla.js  
+│   │   ├── loginPage_scripts    
+│   │   │   ├── login_page_vanilla.js
+│   │   │   ├── set_theme.js
+│   │   │   └── version.js
 │   └── vue/                        # Interface de Alta Performance (Framework)
 │       ├── views/                  # Estruturas macro das telas
 │       └── components/             # Peças reutilizáveis da interface
