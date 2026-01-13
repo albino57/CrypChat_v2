@@ -1,6 +1,6 @@
 # 📟 CrypChat
 
-![Versão](https://img.shields.io/badge/versão-v0.1.2-green?style=for-the-badge&color=003B00&labelColor=000000)
+![Versão](https://img.shields.io/badge/versão-v0.2.0-green?style=for-the-badge&color=003B00&labelColor=000000)
 [![Changelog](https://img.shields.io/badge/changelog-visualizar-blue?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 [![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 
