@@ -16,7 +16,7 @@ O **CrypChat** é uma plataforma de comunicação criptografada projetada para c
 
 ## 🚀 O que há de novo na v0.2.0?
 
-Esta versão traz término da **Página de Login**, além de ter descontinuado o **versão legacy** do chat.
+Esta versão traz a conclusão da **Página de Login**, além da **versão legacy** ter sido descontinuada.
 
 - **♿ Acessibilidade:** Implementação de acessibilidade a **Narradores de Texto**.
 - **🎨 UI:** Implementação do modal de 'Registro'.
