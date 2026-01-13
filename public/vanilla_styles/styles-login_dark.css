@@ -4,22 +4,22 @@ body {
     background-color: #000000;
     color: #00FF41;
     font-family: 'Courier New', Courier, monospace;
-    display: flex;           /* Ativa o modo de caixa flexível */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
-    min-height: 100dvh;      /* Usa a altura dinâmica (Dynamic Viewport Height) */
+    display: flex;             /* Ativa o modo de caixa flexível */
+    min-height: 100vh;         /* Redundância para navegadores bem antigos ex.: Chrome 49 | deixa o card no centro.*/
+    min-height: 100dvh;        /* Usa a altura dinâmica (Dynamic Viewport Height) */
     margin: 0;
-    overflow-y: auto;    /* Ativa scroll vertical se o card for maior que a tela */
-    overflow-x: auto;    /* Ativa scroll horizontal se a tela for menor que 315px */
+    overflow-y: auto;          /* Ativa scroll vertical se o card for maior que a tela */
+    overflow-x: auto;          /* Ativa scroll horizontal se a tela for menor que 315px */
 }
 
 .login-card {
+    margin: auto; /* Centraliza horizontalmente e verticalmente sem forçar caso a tela seja menor que o card*/
     border: 3px solid #00FF41;
-    padding: 1rem;
+    padding: 0.5rem;
     background: #000000;
     box-shadow: 10px 10px 5px #003B00; /*horizontal_px | vertical_px | precisão_px*/
-    min-width: 325px;
-    max-width: 325px; /* Largura Máxima do Card*/
+    min-width: 280px;
+    max-width: 360px; /* Largura Máxima do Card*/
     width: 95%;       /* Largura total em 95% garante que não perderá efeito sombra ao espremer a janela */
 }
 
@@ -40,31 +40,36 @@ h1 {
     border-bottom: 2px solid #00FF41;
 }
 
-.field-group, .field-group2 {
+.field-group-connection, .field-group-interface {
     display: flex;
-    flex-direction: column; /* Força os filhos (labels) a ficarem em coluna */
-    gap: 2px;               /* Cria um espaço entre as opções sem precisar de margin */
-    margin-bottom: 1rem; 
+    flex-direction: column;  /* Força os filhos (labels) a ficarem em coluna */
+    gap: 10px;               /* Cria um espaço entre as opções sem precisar de margin */
+    margin-bottom: 0.5rem; 
     border: 1px solid #003B00; 
-    padding: 10px; 
+    padding: 8px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
-.field-group label {
+.field-group-connection label {
     display: flex;
-    align-items: center;      /* Alinha verticalmente no centro */
-    justify-content: space-between; /* Empurra a bolinha para o extremo oposto do texto */
-    width: 100%;              /* Garante que o label ocupe toda a largura do fieldset */
+    align-items: center;    /* Alinha verticalmente no centro */
+    width: 100%;            /* Garante que o label ocupe toda a largura do fieldset */
     cursor: pointer;
-    padding: 4px 0;           /* Um respiro entre as opções */
 }
 
-input[type="text"], input[type="password"] {
+.text-label {
+    flex-grow: 1; /* Empurra a bolinha de status para o final da linha. */
+    white-space: nowrap; /* Impede que o texto quebre de linha. */
+}
+
+input[type="login"], input[type="password"], input[type="text"], input[type="email"] {
     width: 100%;
     background: transparent;
     border: 1px solid #00FF41;
     color: #00FF41;
     padding: 8px;
-    margin-top: 10px;
+    margin-top: 2px;
     box-sizing: border-box;
 }
 
@@ -79,12 +84,34 @@ input[type="text"], input[type="password"] {
     flex-direction: column; /* Coloca o texto em cima e o input embaixo */
     margin-top: 1rem;
     margin-bottom: 0.5rem;  /* Dá espaço entre o campo de usuário e senha */
+    font-weight: bold;
 }
 
 .auth-fields span {
-    font-size: 0.9rem;
-    letter-spacing: 2px;    /* Espaçamento entre letras para parecer terminal */
+    font-size: 1rem;
+    letter-spacing: 3px;    /* Espaçamento entre letras para parecer terminal */
 }
+
+/*----------↓ Modal_register ↓----------*/
+dialog::backdrop {
+    background: #00ff41b3;
+    backdrop-filter: blur(2px); /* Efeito de vidro embaçado */
+}
+
+.modal-estilo{
+    margin: auto;
+    min-width: 250px;
+    max-width: 290px;
+    color: #00FF41;
+}
+
+h2 {
+    font-size: larger;
+    text-align: center;
+    margin-top: 0;
+    color: #00FF41;
+}
+/*----------↑ Modal_register ↑----------*/
 
 /*----------↓ Sinal de On-line ↓----------*/
 .status-dot {
@@ -97,7 +124,7 @@ input[type="text"], input[type="password"] {
 }
 
 .online {
-    background-color: rgb(16, 186, 16);
+    background-color: #10ba10;
     box-shadow: 0 0 8px lightgreen;
 }
 
@@ -112,7 +139,6 @@ input[type="text"], input[type="password"] {
     position: absolute; /* Sai do fluxo normal e flutua */
     right: 0;           /* Alinha na parede da direita */
     top:  0;            /* Alinha com o topo do header */
-    
     background: transparent;
     color: #00FF41;
     font-family: 'Courier New', monospace;
@@ -132,33 +158,34 @@ input[type="text"], input[type="password"] {
     width: 100%;
 }
 
-.btn-register, .btn-connect {
+.btn-register, .btn-connect, .btn-cancel, .btn-request{
     flex: 1;        /* Faz ambos crescerem igualmente para ocupar a largura */
     padding: 10px;
     font-weight: bold;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: 0.5s;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
-.btn-register {
+.btn-register, .btn-cancel {
     background: transparent;
     border: 1px solid #00FF41;
     color: #00FF41;
 }
 
-.btn-connect {
+.btn-connect, .btn-request {
     background: #00FF41;
-    border: 1px solid #00FF41;
+    border: 1px solid #00ff41;
     color: #000000;
 }
 
-.btn-register:hover {
+.btn-register:hover, .btn-cancel:hover {
     color: white;
     box-shadow: 0 0 25px white;
 }
 
-.btn-connect:hover { 
+.btn-connect:hover, .btn-request.btn-request:hover { 
     background: white; 
     color: #00FF41;
     box-shadow: 0 0 25px white;
@@ -243,7 +270,7 @@ input[type="text"], input[type="password"] {
   100% { box-shadow: 0 0 0px #00FF41; }
 }
 
-.btn-connect {
+.btn-connect, .btn-request {
     animation: Conectar-pulse 3s infinite ease-in-out;
 }
 /*-----↑ Animação botão Conextar_ ↑-----*/

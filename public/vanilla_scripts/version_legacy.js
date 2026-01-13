@@ -7,7 +7,7 @@ function versionButton() {
     var btn = document.querySelector('.btn-info'); // Busca no HTML o primeiro elemento que tenha a classe CSS '.btn-info' e o armazena na variável para manipulação.
     
     if (btn) {
-        btn.innerText = "CrypChat v..."; // Renderiza o texto do botão sem mostrar a versão porque ainda será consultado.
+        btn.innerText = "Aplicação desativada porque usa JS antigo ES5, acesse com um navegador moderno!"; // Renderiza o texto do botão sem mostrar a versão porque ainda será consultado.
     }
 
     xhr.open('GET', url, true); // Configura a requisição para buscar dados (GET) de forma assíncrona, sem congelar a interface durante o download.
@@ -38,7 +38,7 @@ function versionButton() {
                 }
 
                 if (btn) { // Checa se o botão existe na página antes de tentar manipulá-lo, evitando erros de script caso o botão não seja encontrado.
-                    btn.innerText = "CrypChat v" + current; // Aqui o botão de versão já recebe o texto dinamicamente.
+                    btn.innerText = "Aplicação desativada porque usa JS antigo ES5, acesse com um navegador moderno!" ; // Aqui o botão de versão já recebe o texto dinamicamente.
                     btn.onclick = function () {
                         alert(
                             "📟 CRYPCHAT VERSÃO v" + current + "\n" +

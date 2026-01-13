@@ -14,15 +14,12 @@ O **CrypChat** é uma plataforma de comunicação criptografada projetada para c
 
 ---
 
-## 🚀 O que há de novo na v0.1.2?
+## 🚀 O que há de novo na v0.2.0?
 
-Esta versão traz um grande foco em **Estabilidade Mobile** e **Acessibilidade**, além de preparar o terreno para o futuro do projeto.
+Esta versão traz término da **Página de Login**, além de ter descontinuado o **versão legacy** do chat.
 
-- **📱 Mobile Experience:** Adeus ao zoom indesejado ao digitar e ao scroll "bobo". A interface agora é firme e usa 100% da altura real da tela (`100dvh`).
-- **♿ Acessibilidade:** Implementada opção nativa para **reduzir movimentos**, pensando em usuários com cinetose (Motion Sickness).
-- **👴 Modo Legacy:** Suporte robusto a navegadores antigos (Android 5+) com scripts dedicados e nova estrutura na pasta `/public`.
-- **🎨 UI Refinada:** Melhorias visuais no **Tema Light**, animações de flicker ajustadas e botão de versão dinâmico.
-- **🔧 Arquitetura:** Reorganização completa de diretórios para garantir escalabilidade nas próximas versões.
+- **♿ Acessibilidade:** Implementação de acessibilidade a **Narradores de Texto**.
+- **🎨 UI:** Implementação do modal de 'Registro'.
 
 Para uma lista completa e detalhada de funcionalidades adicionadas e correções de bugs, por favor, consulte o arquivo **[CHANGELOG.md](CHANGELOG.md)**.
 
@@ -53,9 +50,10 @@ crypchat/
 ├── index.html                      # Ponto de entrada (Login Vanilla)
 ├── public/
 │   ├── versions.json               # Histórico de versões
-│   ├── vanilla_scripts
-│   |   ├── set_theme_legacy.js
-│   |   └── version_legacy.js
+│   ├── vanilla_scripts             # Descontinuado
+│   |   ├── set_theme_legacy.js     # Descontinuado
+│   |   ├── modal_register_legacy.js# Descontinuado
+│   |   └── version_legacy.js       # Descontinuado
 │   ├── vanilla_styles
 │   │   ├── styles-login_dark.css   # Estilo CSS do modo vanilla no tema escuro
 │   │   └── styles-login_light.css  # Estilo CSS do modo vanilla no tema claro

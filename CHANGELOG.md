@@ -1,6 +1,23 @@
 # Changelog - CrypChat
 
 ---
+## 2026-01-13
+### Added
+- Página de Login finalizada.
+- Implementação de acessibilidade a Narradores de Texto.
+- Implementação do modal de 'Registro'.
+
+### Removed
+- Descontinuado a versão Legacy do chat por motivo de segurança.
+
+### Changed
+- Melhoria de UI E UX para telas pequenas.
+
+### Fixed
+- Correção de corte lateral do card em telas pequenas e restauração do comportamento de scroll horizontal.
+
+
+---
 ## 2026-01-08
 ### Added
 - Implementação do nome e versão da aplicação ao invés do nome "InfoVersão".
@@ -11,16 +28,18 @@
 - Reestruturação de diretórios em `/src/vanilla/` para maior escalabilidade.
 - Reestruturação de diretórios em `/public/`para compatibilidade de scripts legacy.
 - Refatoração estética do Tema Light e animações de Flicker em ambos os temas.
-- Refatoração do dos arquivos de versão.
+- Refatoração dos arquivos de versão.
 
 ### Fixed
 - Ajuste de `font-size` em inputs para evitar zoom automático em mobile.
 - Correção de scroll indesejado e centralização via `100dvh` para mobile.
 
+
 ---
 ## 2026-01-07
 ### Fixed
 - Correção de bug de UI/UX na alternância de temas da página de login.
+
 
 ---
 ## 2026-01-06
