@@ -1,0 +1,73 @@
+<!-- ./chat.html-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>CripChat</title>
+    <link rel="stylesheet" href="./src/styles_vanilla/chat.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-left">
+                <h1 class="logo-text">Cryp_</h1>
+            </div>
+
+            <div class="header-center">
+                <span class="status-icon" title="Banco de Dados Conectado" aria-label="Status Banco de Dados">
+                    [DB:ON]
+                </span>
+                <span class="crypto-badge" title="Criptografia Ativa">
+                    🔒AES64
+                </span>
+            </div>
+
+            <div class="header-right">
+                <button id="theme-toggle" class="theme-btn" aria-hidden="true" tabindex="-1">[1]</button>
+                <button class="icon-btn menu-hamburger" aria-label="Menu de Opções">☰</button>
+            </div>
+        </header>
+
+        <main class="contacts-area">
+            <div class="contacts-tools">
+                <button class="tool-btn add-user">
+                    <span>+</span> ADD_
+                </button>
+                <button class="tool-btn del-user">
+                    <span>-</span> DEL_
+                </button>
+            </div>
+
+            <div class="contacts-list">
+                <div class="contact-item active">
+                    <span class="avatar">[A]</span>
+                    <span class="name">Administrador</span>
+                    <span class="status-dot online"></span>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="avatar">[D]</span>
+                    <span class="name">Dev</span>
+                    <span class="status-dot offline"></span>
+                </div>
+                
+                <div class="contact-item">
+                    <span class="avatar">[R]</span>
+                    <span class="name">Rafael</span>
+                    <span class="status-dot busy"></span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <button id="version-display" class="btn-info">InfoVersão</button>
+        </footer>
+    </div>
+
+    <script type="module" src="./src/scripts/version.js"></script>
+    <script type="module" src="./src/scripts/set_theme.js"></script>
+</body>
+</html>

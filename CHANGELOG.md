@@ -1,6 +1,21 @@
 # Changelog - CrypChat
 
 ---
+## 2026-01-14
+### Added
+- Implementação da tela chat principal 'TESTE'.
+- Implementação de memória de tema para melhor UX.
+
+### Removed
+- Remoção da versão Legacy (Scripts se encontram no diretório ./public/vanillaLegacy_scripts-desc) para fins educaionais.
+
+### Changed
+- Mudança de cores do CSSs da página de login.
+- Reestruturação de diretórios para compatibilidade de scripts futuramente com vue.
+- Reestruturação do CSS de tema.
+
+
+---
 ## 2026-01-13
 ### Added
 - Página de Login finalizada.

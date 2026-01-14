@@ -1,6 +1,6 @@
 # 📟 CrypChat
 
-![Versão](https://img.shields.io/badge/versão-v0.2.0-green?style=for-the-badge&color=003B00&labelColor=000000)
+![Versão](https://img.shields.io/badge/versão-v0.2.1-green?style=for-the-badge&color=003B00&labelColor=000000)
 [![Changelog](https://img.shields.io/badge/changelog-visualizar-blue?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 [![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 
@@ -14,12 +14,12 @@ O **CrypChat** é uma plataforma de comunicação criptografada projetada para c
 
 ---
 
-## 🚀 O que há de novo na v0.2.0?
+## 🚀 O que há de novo na v0.2.1?
 
-Esta versão traz a conclusão da **Página de Login**, além da **versão legacy** ter sido descontinuada.
+Esta versão traz a criação da **Página de Chat** de teste, além da **Memória de Tema** para melhorar a UX.
 
-- **♿ Acessibilidade:** Implementação de acessibilidade a **Narradores de Texto**.
-- **🎨 UI:** Implementação do modal de 'Registro'.
+- **❌ Descontinuado:** Remoção da versão **Legacy**.
+- **🎨 UX:** Implementação de **Memória de Tema**.
 
 Para uma lista completa e detalhada de funcionalidades adicionadas e correções de bugs, por favor, consulte o arquivo **[CHANGELOG.md](CHANGELOG.md)**.
 
@@ -50,26 +50,23 @@ crypchat/
 ├── index.html                      # Ponto de entrada (Login Vanilla)
 ├── public/
 │   ├── versions.json               # Histórico de versões
-│   ├── vanilla_scripts             # Descontinuado
-│   |   ├── set_theme_legacy.js     # Descontinuado
-│   |   ├── modal_register_legacy.js# Descontinuado
-│   |   └── version_legacy.js       # Descontinuado
-│   ├── vanilla_styles
-│   │   ├── styles-login_dark.css   # Estilo CSS do modo vanilla no tema escuro
-│   │   └── styles-login_light.css  # Estilo CSS do modo vanilla no tema claro
+│   └── vanillaLegacy_scripts-desc  # Descontinuado
 ├── src/
 │   ├── core/                       # Script typeScript da Lógica de segurança e criptografia
 │   │   └── crypto_engine.ts
-│   ├── common/                     # DNA Visual (Cores, Fontes e Keyframes Globais)
-│   ├── vanilla/                    # Scripts JavaScript
-│   │   ├── styles/                 # Layouts específicos do modo raiz
-│   │   ├── chatPage_scripts
-│   │   │   └── chat_page_vanilla.js  
-│   │   ├── loginPage_scripts    
-│   │   │   ├── login_page_vanilla.js
-│   │   │   ├── set_theme.js
-│   │   │   └── version.js
-│   └── vue/                        # Interface de Alta Performance (Framework)
+│   ├── common/                     # 
+│   ├── scripts/                    # Scripts
+│   │   ├── chatPage
+│   │   │   └── chat_page.js  
+│   │   ├── loginPage
+│   │   │   ├── login_page.js
+│   │   │   └──modal_register.js
+│   │   ├── set_theme.js
+│   │   └── version.js
+│   ├── styles_vanilla/             # Layouts específicos do modo vanilla
+│   |   ├── chat.css
+│   |   └── index.css
+│   └── vue/                        # Interface Vue (Framework)
 │       ├── views/                  # Estruturas macro das telas
 │       └── components/             # Peças reutilizáveis da interface
 ├── .gitignore

@@ -1,4 +1,4 @@
-// /src/vanilla/loginPage_script/modal_register.js
+// /src/scripts/loginPage/modal_register.js
 
 const modal = document.getElementById('modal-register');
 const btnOpen = document.querySelector('.btn-register');

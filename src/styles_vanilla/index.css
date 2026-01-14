@@ -1,8 +1,25 @@
-/* ./public/vanilla_styles/styles-login_dark.css */
+/* ./src/styles/index.css */
+
+:root{
+    --text: #00F444;
+    --background: #000000;
+    --shadow: #003B00;
+    --transparent-background: #00F444b3;
+    --online-dot: #10ba10;
+    --offline-dot: #ff0000;
+    --btn-hover: #ffffff;
+}
+
+body.light-theme {
+    --text: #044400;
+    --background: #cacaca;
+    --shadow: #1a4d2e;
+    --transparent-background: #044400b3;
+}
 
 body {
-    background-color: #000000;
-    color: #00FF41;
+    background-color: var(--background);
+    color: var(--text);
     font-family: 'Courier New', Courier, monospace;
     display: flex;             /* Ativa o modo de caixa flexível */
     min-height: 100vh;         /* Redundância para navegadores bem antigos ex.: Chrome 49 | deixa o card no centro.*/
@@ -14,10 +31,10 @@ body {
 
 .login-card {
     margin: auto; /* Centraliza horizontalmente e verticalmente sem forçar caso a tela seja menor que o card*/
-    border: 3px solid #00FF41;
+    border: 3px solid var(--text);
     padding: 0.5rem;
-    background: #000000;
-    box-shadow: 10px 10px 5px #003B00; /*horizontal_px | vertical_px | precisão_px*/
+    background: var(--background);
+    box-shadow: 10px 10px 5px var(--shadow); /*horizontal_px | vertical_px | precisão_px*/
     min-width: 280px;
     max-width: 360px; /* Largura Máxima do Card*/
     width: 95%;       /* Largura total em 95% garante que não perderá efeito sombra ao espremer a janela */
@@ -37,7 +54,7 @@ h1 {
     padding-bottom: 0.1rem;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
-    border-bottom: 2px solid #00FF41;
+    border-bottom: 2px solid var(--text);
 }
 
 .field-group-connection, .field-group-interface {
@@ -45,7 +62,7 @@ h1 {
     flex-direction: column;  /* Força os filhos (labels) a ficarem em coluna */
     gap: 10px;               /* Cria um espaço entre as opções sem precisar de margin */
     margin-bottom: 0.5rem; 
-    border: 1px solid #003B00; 
+    border: 1px solid var(--shadow); 
     padding: 8px;
     font-size: 1.1rem;
     letter-spacing: 1px;
@@ -66,8 +83,8 @@ h1 {
 input[type="login"], input[type="password"], input[type="text"], input[type="email"] {
     width: 100%;
     background: transparent;
-    border: 1px solid #00FF41;
-    color: #00FF41;
+    border: 1px solid var(--text);
+    color: var(--text);
     padding: 8px;
     margin-top: 2px;
     box-sizing: border-box;
@@ -94,7 +111,7 @@ input[type="login"], input[type="password"], input[type="text"], input[type="ema
 
 /*----------↓ Modal_register ↓----------*/
 dialog::backdrop {
-    background: #00ff41b3;
+    background: var(--transparent-background);
     backdrop-filter: blur(2px); /* Efeito de vidro embaçado */
 }
 
@@ -102,14 +119,14 @@ dialog::backdrop {
     margin: auto;
     min-width: 250px;
     max-width: 290px;
-    color: #00FF41;
+    color: var(--text);
 }
 
 h2 {
     font-size: larger;
     text-align: center;
     margin-top: 0;
-    color: #00FF41;
+    color: var(--text);
 }
 /*----------↑ Modal_register ↑----------*/
 
@@ -124,13 +141,13 @@ h2 {
 }
 
 .online {
-    background-color: #10ba10;
-    box-shadow: 0 0 8px lightgreen;
+    background-color: var(--online-dot);
+    box-shadow: 0 0 8px var(--online-dot);
 }
 
 .offline {
-    background-color: #ff0000;
-    box-shadow: 0 0 8px #ff0000;
+    background-color: var(--offline-dot);
+    box-shadow: 0 0 8px var(--offline-dot);
 }
 /*----------↑ Sinal de On-line ↑----------*/
 
@@ -140,7 +157,7 @@ h2 {
     right: 0;           /* Alinha na parede da direita */
     top:  0;            /* Alinha com o topo do header */
     background: transparent;
-    color: #00FF41;
+    color: var(--text);
     font-family: 'Courier New', monospace;
     font-size: 1rem; 
     cursor: pointer;
@@ -148,7 +165,7 @@ h2 {
 }
 
 .theme-btn:hover {
-    color: #ff0000;
+    color: var(--offline-dot);
 }
 
 .btn {
@@ -170,25 +187,25 @@ h2 {
 
 .btn-register, .btn-cancel {
     background: transparent;
-    border: 1px solid #00FF41;
-    color: #00FF41;
+    border: 1px solid var(--text);
+    color: var(--text);
 }
 
 .btn-connect, .btn-request {
-    background: #00FF41;
-    border: 1px solid #00ff41;
-    color: #000000;
+    background: var(--text);
+    border: 1px solid var(--text);
+    color: var(--background);
 }
 
 .btn-register:hover, .btn-cancel:hover {
-    color: white;
-    box-shadow: 0 0 25px white;
+    color: var(--btn-hover);
+    box-shadow: 0 0 25px var(--btn-hover);
 }
 
 .btn-connect:hover, .btn-request.btn-request:hover { 
-    background: white; 
-    color: #00FF41;
-    box-shadow: 0 0 25px white;
+    background: var(--btn-hover); 
+    color: var(--text);
+    box-shadow: 0 0 25px var(--btn-hover);
     transform: scale(1.05); /* Aumenta ao passar o mouse */
 }
 
@@ -197,7 +214,7 @@ h2 {
     margin-left: auto;
     background: transparent;
     border: none;
-    color: #00FF41;
+    color: var(--text);
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     cursor: pointer;
@@ -265,9 +282,9 @@ h2 {
 
 /*-----↓ Animação botão Conectar_ ↓-----*/
 @keyframes Conectar-pulse {
-  0% { box-shadow: 0 0 0px #00FF41;   }
-  50% { box-shadow: 0 0 15px #00FF41; }
-  100% { box-shadow: 0 0 0px #00FF41; }
+  0% { box-shadow: 0 0 0px var(--text);   }
+  50% { box-shadow: 0 0 15px var(--text); }
+  100% { box-shadow: 0 0 0px var(--text); }
 }
 
 .btn-connect, .btn-request {

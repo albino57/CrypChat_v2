@@ -1,0 +1,193 @@
+/* ./src/styles/chat.css */
+
+:root{
+    --text: #00F444;
+    --background: #000000;
+    --shadow: #003B00;
+    --transparent-background: #00F444b3;
+    --contact-border: #111;
+    --online-dot: #10ba10;
+    --busyline-dot: #ff0000;
+    --offline-dot: #555555;
+}
+
+body.light-theme {
+    --text: #044400;
+    --background: #cacaca;
+    --shadow: #1a4d2e;
+    --transparent-background: #044400b3;
+    --contact-border: #111;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    height: 100dvh; /* Altura total da tela */
+    overflow: hidden; /* Evita scroll na página inteira, só na lista */
+}
+
+/* O Container Principal */
+.app-container {
+    display: flex;
+    flex-direction: column; /* Empilha: Header, Main, Footer */
+    height: 100%;
+    /*max-width: 500px;*/
+}
+
+/*-----↓ HEADER ↓-----*/
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 2px solid var(--shadow);
+    background-color: var(--background);
+    height: 50px; /* Altura fixa para estabilidade */
+}
+
+.logo-text {
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.header-center {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+
+.crypto-badge {
+    border: 1px solid #ff0000;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--shadow);
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/*-----↑ HEADER ↑-----*/
+
+/*-----↓ CONTACTS AREA (Barra Lateral/Central) ↓-----*/
+.contacts-area {
+    flex-grow: 1; /* Ocupa todo o espaço que sobrar entre Header e Footer */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-right: 1px solid var(--shadow); /* Borda sutil à direita (pensando no desktop futuro) */
+}
+
+/* Ferramentas (+ e -) */
+.contacts-tools {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    border-bottom: 1px dashed var(--shadow);
+}
+
+.tool-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--text);
+    color: var(--text);
+    padding: 8px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.tool-btn:hover {
+    background: var(--text);
+    color: var(--background);
+}
+
+/* Lista de Contatos */
+.contacts-list {
+    flex-grow: 1;
+    overflow-y: auto; /* Scroll apenas aqui dentro se tiver muitos contatos */
+    padding: 5px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--contact-border);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.contact-item:hover {
+    background-color: var(--shadow);
+    padding-left: 25px; /* Efeitinho de movimento */
+}
+
+.contact-item.active {
+    background-color: var(--shadow);
+    border-left: 3px solid var(--text);
+}
+
+.avatar {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.name {
+    flex-grow: 1;
+}
+
+/* Bolinhas de Status */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+.status-dot.online { background-color: var(--online-dot); box-shadow: 0 0 5px var(--online-dot); }
+.status-dot.busy { background-color: var(--busyline-dot); }
+.status-dot.offline { background-color: var(--offline-dot); }
+
+/* --- FOOTER --- */
+.btn-info {
+    display: flex;
+    margin: auto;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+/* --- RESPONSIVIDADE (A Lógica do XXXpx) --- 
+ Se a tela for maior que 768px (Tablet/PC), limitamos a largura da lista 
+@media (min-width: 768px) {
+    .app-container {
+        flex-direction: row;  Muda para linha!
+        flex-wrap: wrap;  Permite quebrar linha para header/footer se precisar 
+    }
+
+    .app-header, .app-footer {
+        width: 100%;  Header e Footer continuam ocupando tudo 
+    }
+
+    .contacts-area {
+        max-width: 300px;  Limita a largura da lista de contatos 
+        border-right: 2px solid var(--text);
+    }
+    
+     Aqui vira a área do chat no futuro, ocupando o resto 
+
+} */

@@ -1,4 +1,4 @@
-// /src/vanilla/loginPage_script/version.js
+// /src/scripts/loginPage/version.js
 
 async function versionButton() {
     const btn = document.querySelector('.btn-info'); // Busca no HTML o primeiro elemento que tenha a classe CSS '.btn-info' e o armazena na variável para manipulação.
@@ -6,7 +6,7 @@ async function versionButton() {
     if (btn) btn.innerText = "CrypChat v..."; // Renderiza o texto do botão sem mostrar a versão porque ainda será consultado.
 
     try {
-        const response = await fetch('versions.json?t=' + Date.now()); // Adiciona um timestamp à response para forçar o download novo e evitar que o navegador use versões antigas salvas em cache
+        const response = await fetch('./public/versions.json?t=' + Date.now()); // Adiciona um timestamp à response para forçar o download novo e evitar que o navegador use versões antigas salvas em cache
 
         if (!response.ok) throw new Error("Erro HTTP: " + response.status); // Força o erro e ir para catch caso o fetch caso servidor responda .json não existe.
 
