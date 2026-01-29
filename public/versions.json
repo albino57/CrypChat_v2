@@ -1,8 +1,23 @@
 {
   "app_name": "CrypChat",
-  "latest_version": "0.2.1",
+  "latest_version": "0.2.2",
   "status": "development",
   "history": [
+    {
+      "version": "0.2.2",
+      "date": "2026-01-29",
+      "changes": [
+        "Implementação de validação rigorosa via **Regex** nos campos de Login e Registro.",
+        "Bloqueio nativo dos **botões de ação**; liberação ocorre apenas mediante validação JavaScript (Prevenção contra bypass de HTML).",
+        "Feedback visual **tooltip** informando o motivo do bloqueio dos botões.",
+        "Implementação de **Campos Burros** na exibição de erros.",
+        "**Implementação visual dos botões** de ação quando estão desativados no arquivo 'CSS'.",
+        "Correção na área de clique (hitbox) do `field-group-interface`.",
+        "Correção de bugs semânticos no `index.html` (IDs ausentes e tipos de input incorretos).",
+        "Correção/Remoção de vulnerabilidade de **DOM-Based XSS** no módulo de versionamento (`version.js`), substituindo `innerHTML` por `textContent`.",
+        "Arquivos **Legacy** foram totalmente excluídos."
+      ]
+    },
     {
       "version": "0.2.1",
       "date": "2026-01-14",

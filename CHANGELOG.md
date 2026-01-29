@@ -1,7 +1,24 @@
 # Changelog - CrypChat
 
+## v0.2.2 - 2026-01-29
+### Added
+- Implementação de validação rigorosa via **Regex** nos campos de Login e Registro.
+- Bloqueio nativo dos **botões de ação**; liberação ocorre apenas mediante validação JavaScript (Prevenção contra bypass de HTML).
+- Feedback visual **tooltip** informando o motivo do bloqueio dos botões.
+- Implementação de **Campos Burros** na exibição de erros.
+- **Implementação visual dos botões** de ação quando estão desativados no arquivo 'CSS'.
+
+### Fixed
+- Correção na área de clique (hitbox) do `field-group-interface`.
+- Correção de bugs semânticos no `index.html` (IDs ausentes e tipos de input incorretos).
+- Correção/Remoção de vulnerabilidade de **DOM-Based XSS** no módulo de versionamento (`version.js`), substituindo `innerHTML` por `textContent`.
+
+### Removed
+- Arquivos **Legacy** foram totalmente excluídos.
+
+
 ---
-## 2026-01-14
+## v0.2.1 - 2026-01-14
 ### Added
 - Implementação da tela chat principal 'TESTE'.
 - Implementação de memória de tema para melhor UX.
@@ -16,7 +33,7 @@
 
 
 ---
-## 2026-01-13
+## v0.2.0 - 2026-01-13
 ### Added
 - Página de Login finalizada.
 - Implementação de acessibilidade a Narradores de Texto.
@@ -33,7 +50,7 @@
 
 
 ---
-## 2026-01-08
+## v0.1.2 - 2026-01-08
 ### Added
 - Implementação do nome e versão da aplicação ao invés do nome "InfoVersão".
 - Implementação da opção que desativa as animações e transições para usuários com cinetose.
@@ -51,13 +68,13 @@
 
 
 ---
-## 2026-01-07
+## v0.1.1 - 2026-01-07
 ### Fixed
 - Correção de bug de UI/UX na alternância de temas da página de login.
 
 
 ---
-## 2026-01-06
+## v0.1.0 - 2026-01-06
 ### Added
 - Estrutura base em HTML5 focada em acessibilidade e suporte a navegadores legados.
 - Estilização com tema Matrix/PixelArt em CSS puro (otimizado para baixa largura de banda).

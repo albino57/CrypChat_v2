@@ -1,6 +1,6 @@
 # 📟 CrypChat
 
-![Versão](https://img.shields.io/badge/versão-v0.2.1-green?style=for-the-badge&color=003B00&labelColor=000000)
+![Versão](https://img.shields.io/badge/versão-v0.2.2-green?style=for-the-badge&color=003B00&labelColor=000000)
 [![Changelog](https://img.shields.io/badge/changelog-visualizar-blue?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 [![Status do Projeto](https://img.shields.io/badge/status-em_desenvolvimento-yellow?style=for-the-badge&color=003B00&labelColor=000000)](CHANGELOG.md)
 
@@ -14,12 +14,13 @@ O **CrypChat** é uma plataforma de comunicação criptografada projetada para c
 
 ---
 
-## 🚀 O que há de novo na v0.2.1?
+## 🚀 O que há de novo na v0.2.2?
 
-Esta versão traz a criação da **Página de Chat** de teste, além da **Memória de Tema** para melhorar a UX.
+Esta versão traz a implementação do **Regex**, bloqueio nativo dos **botões de ação**, além da Implementação de **Campos Burros** para segurança XSS.
 
-- **❌ Descontinuado:** Remoção da versão **Legacy**.
-- **🎨 UX:** Implementação de **Memória de Tema**.
+- **❌ Descontinuado:** Remoção completa dos arquivos versão **Legacy**.
+- **🔐 Segurança:** Correção/Remoção de vulnerabilidade de **DOM-Based XSS**.
+- **🎨 UX/UI:** Implementação visual dos **botões desativados**.
 
 Para uma lista completa e detalhada de funcionalidades adicionadas e correções de bugs, por favor, consulte o arquivo **[CHANGELOG.md](CHANGELOG.md)**.
 

@@ -1,4 +1,4 @@
-// /src/scripts/loginPage/version.js
+// /src/scripts/version.js
 
 async function versionButton() {
     const btn = document.querySelector('.btn-info'); // Busca no HTML o primeiro elemento que tenha a classe CSS '.btn-info' e o armazena na variável para manipulação.
@@ -6,7 +6,7 @@ async function versionButton() {
     if (btn) btn.innerText = "CrypChat v..."; // Renderiza o texto do botão sem mostrar a versão porque ainda será consultado.
 
     try {
-        const response = await fetch('./public/versions.json?t=' + Date.now()); // Adiciona um timestamp à response para forçar o download novo e evitar que o navegador use versões antigas salvas em cache
+        const response = await fetch('versions.json?t=' + Date.now()); // Adiciona um timestamp à response para forçar o download novo e evitar que o navegador use versões antigas salvas em cache
 
         if (!response.ok) throw new Error("Erro HTTP: " + response.status); // Força o erro e ir para catch caso o fetch caso servidor responda .json não existe.
 
@@ -32,16 +32,12 @@ github.com/albino57/CrypChat_v2`
     } catch (error) {
         console.error("Erro ao carregar versão:", error);
 
-        // Se o botão existir, o usuário é avisado no clique
-        if (btn) {
-            btn.onclick = function () {
-                alert("📟 ERRO: Arquivo versions.json inacessível ou corrompido.");
-            };
-        }
-
         // If para escrever no botão que tem erro.
         if (btn) {
-            btn.innerHTML = "<span style='color: #ff3333;'> [!] Erro no versions.json </span>";
+            btn.style.color = "#ff3333";
+            btn.style.cursor = "help";
+            btn.textContent = "[!] Erro no versions.json";
+            btn.title = "📟 ERRO: Arquivo versions.json inacessível ou corrompido.";
         }
     }
 }

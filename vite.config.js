@@ -8,13 +8,13 @@ export default defineConfig({
     host: true
   },
   
-  plugins: [vue()], // "Ei Vite, aprenda a ler arquivos .vue"
+  plugins: [vue()], // "Lê arquivos .vue"
   build: {
     rollupOptions: {
       input: {
-        // Ponto de entrada 1: O seu Login Vanilla
+        // Ponto de entrada 1: Login Vanilla
         main: resolve(__dirname, 'index.html'),
-        // Ponto de entrada 2: O seu Chat em Vue
+        // Ponto de entrada 2: Chat em Vue
         app: resolve(__dirname, 'app/index.html') 
       }
     }

@@ -75,6 +75,10 @@ h1 {
     cursor: pointer;
 }
 
+.field-group-interface label{
+    cursor: pointer;
+}
+
 .text-label {
     flex-grow: 1; /* Empurra a bolinha de status para o final da linha. */
     white-space: nowrap; /* Impede que o texto quebre de linha. */
@@ -221,6 +225,26 @@ h2 {
     margin-top: 20px;
 }
 /*----------↑ Botões ↑----------*/
+
+/*----------↓ Estado Travado (Disabled) ↓----------*/
+button:disabled {
+    cursor: not-allowed !important;         /* Força o cursor de proibido */
+    opacity: 0.3 !important;                /* Força transparência (cinza) */
+    animation: none !important;             /* PARA de pulsar */
+    transform: none !important;             /* Não cresce */
+    box-shadow: none !important;            /* Sem brilho */
+    background: transparent !important;     /* Tira o preenchimento sólido */
+    color: var(--text) !important;          /* Volta a ser apenas contorno */
+    border-color: var(--shadow) !important; /* Borda mais apagada */
+}
+
+/* Garante que o hover não funcione quando travado */
+button:disabled:hover {
+    box-shadow: none !important;
+    color: var(--text) !important;
+    background: transparent !important;
+}
+/*----------↑ Estado Travado (Disabled) ↑----------*/
 
 @media (prefers-reduced-motion: reduce) { /*Opção que desativa as animações e transições Cinetose (Motion Sickness)*/
     * {
