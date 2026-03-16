@@ -6,7 +6,7 @@ async function versionButton() {
     if (btn) btn.innerText = "CrypChat v..."; // Renderiza o texto do botão sem mostrar a versão porque ainda será consultado.
 
     try {
-        const response = await fetch('versions.json?t=' + Date.now()); // Adiciona um timestamp à response para forçar o download novo e evitar que o navegador use versões antigas salvas em cache
+        const response = await fetch('./public/versions.json?t=' + Date.now()); // Adiciona um timestamp à response para forçar o download novo e evitar que o navegador use versões antigas salvas em cache
 
         if (!response.ok) throw new Error("Erro HTTP: " + response.status); // Força o erro e ir para catch caso o fetch caso servidor responda .json não existe.
 
@@ -22,7 +22,8 @@ async function versionButton() {
             let lastChangeFormatted = changesArray.map(linha => `• ${linha}`).join('\n');
             alert(`📟 CRYPCHAT VERSÃO v ${current}
 ---------------------------------
-Último Update ↓ ${lastChangeFormatted}
+Último Update ↓
+${lastChangeFormatted}
 ---------------------------------
 📜 CHANGELOG completo em:
 github.com/albino57/CrypChat_v2`

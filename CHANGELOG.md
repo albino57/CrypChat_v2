@@ -1,5 +1,15 @@
 # Changelog - CrypChat
 
+## v0.2.3 - 2026-02-04
+### Added
+-
+
+### Fixed
+
+-
+### Changed
+
+---
 ## v0.2.2 - 2026-01-29
 ### Added
 - Implementação de validação rigorosa via **Regex** nos campos de Login e Registro.

@@ -19,12 +19,12 @@
 <body>
     <main class="login-card">
         <header>
-            <button id="theme-toggle" class="theme-btn" aria-hidden="true" tabindex="-1" style="cursor: not-allowed; opacity: 0.3;" disabled >[1]</button>
+            <button id="theme-toggle" class="theme-btn" aria-hidden="true" tabindex="-1" disabled >[1]</button>
             <h1 class="glitch" aria-label="Crip Chat">CrypChat</h1>
         </header>
 
         <form id="login-form">
-            <fieldset class="field-group-connection">
+            <fieldset disabled id="FGC" class="field-group-connection">
                 <legend>Modo de Conexão</legend>
                 <!-- <legend>: É uma tag que explica para Leitores de Tela o que o usuário deve fazer dentro do quadrado.-->
                 <label class="radio-label">
@@ -41,30 +41,30 @@
 
             </fieldset>
 
-            <fieldset class="field-group-interface">
+            <fieldset disabled id="FGIF" class="field-group-interface">
                 <legend>Interface</legend>
                 <label>
-                    <input type="radio" name="modo" value="vanilla"> Leve
+                    <input type="radio" name="modo" value="vanilla"> Leve matrix
                 </label>
                 <label>
-                    <input type="radio" name="modo" value="vue"> Normal
+                    <input style="cursor: not-allowed;" type="radio" name="modo" value="vue"> Normal
                 </label>
             </fieldset>
 
             <div class="auth-fields">
                 <label>
-                    <span>USUÁRIO</span>
-                    <input id="login-user" type="email" required>
+                    <span style="opacity: 0.3;" >USUÁRIO</span>
+                    <input id="login-user" type="email" required disabled>
                 </label>
                 <label>
-                    <span>SENHA</span>
-                    <input id="login-pass" type="password" required>
+                    <span style="opacity: 0.3;" >SENHA</span>
+                    <input id="login-pass" type="password" required disabled>
                 </label>
             </div>
 
             <div class="btn">
-                <button type="button" disabled class="btn-register" style="cursor: not-allowed; opacity: 0.3;" disabled >REGISTRAR_</button>
-                <button type="button" disabled class="btn-connect" style="cursor: not-allowed; opacity: 0.3;" disabled >CONECTAR_</button>
+                <button type="button" class="btn-register" disabled >REGISTRAR_</button>
+                <button type="button" class="btn-connect"  disabled >CONECTAR_</button>
             </div>
         </form>
 
